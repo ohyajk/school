@@ -7,3 +7,17 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+
+.fa-shake {
+  animation-iteration-count: 1;
+  animation-duration: 1.5s;
+}
+
+.fa-spin {
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+}
+
+.anim {
+  transition: all .2s ease-in-out;
+}
