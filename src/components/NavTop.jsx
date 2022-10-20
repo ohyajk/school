@@ -25,7 +25,7 @@ export const NavTop = () => {
         </div>
       </div>
       {/* MOBILE VIEW */}
-      <div className="flex justify-between items-center bg-[#E80095] px-2 h-10 w-[100vw] lg:hidden">
+      <div className="flex justify-between items-center bg-[#E80095] px-2 h-10 w-[100vw] lg:hidden ">
         <div className="flex text-white">
           <img className="h-8" src="./new.png" alt="label" />
           <marquee scrollamount="3">This is basic example of marquee</marquee>

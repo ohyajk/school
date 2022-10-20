@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import { motion, AnimatePresence } from "framer-motion"
 
 export const Nav = () => {
 
@@ -12,11 +13,11 @@ export const Nav = () => {
     return (
         <div>
             {/* PC NAV */}
-            <div className='bg-[#0095E8] lg:flex justify-between items-center px-24 h-20 shadow-lg drop-shadow-xl shadow-black hidden '>
+            <div className='bg-[#0095E8] lg:flex justify-between items-center px-24 h-20 shadow-lg drop-shadow-sm hidden'>
                 <div className=''>
-                    <img className='h-20 p-1' src="./school2.png" alt="School logo" />
+                    <img className='h-20 p-1' src="./school.svg" alt="School logo" />
                 </div>
-                <div className='flex text-white text-[20px] font-semibold gap-4'>
+                <div className='flex text-white text-[20px] font-semibold gap-8'>
                     <Link to="/">HOME</Link>
                     <Link to="/academics">ACADEMICS</Link>
                     <Link to="/faculty">FACULTY</Link>
@@ -26,7 +27,7 @@ export const Nav = () => {
                 </div>
             </div>
             {/* MOBILE NAV */}
-            <div className='bg-[#0095E8] flex justify-between items-center px-2 h-14 lg:hidden drop-shadow-xl shadow-blue'>
+            <div className='bg-[#0095E8] flex justify-between items-center px-2 h-14 lg:hidden shadow-sm'>
                 <div className=''>
                     <img className='h-14 p-2' src="./school2.png" alt="School logo" />
                 </div>
@@ -39,12 +40,12 @@ export const Nav = () => {
             {/* Absolute Links & Magics */}
             {state ? <div className='absolute z-50  bg-gradient-to-b from-[#0095E8] to-[#E80095] h-screen w-screen anim'>
                 <div className='relative flex flex-col items-center pt-10 w-full h-full gap-8 text-white'>
-                    <Link to="/">HOME</Link>
-                    <Link to="/academics">ACADEMICS</Link>
-                    <Link to="/faculty">FACULTY</Link>
-                    <Link to="/alumni">ALUMNI</Link>
-                    <Link to="/about">ABOUT</Link>
-                    <Link to="/contact">CONTACT</Link>
+                    <Link onClick={toggle} to="/">HOME</Link>
+                    <Link onClick={toggle} to="/academics">ACADEMICS</Link>
+                    <Link onClick={toggle} to="/faculty">FACULTY</Link>
+                    <Link onClick={toggle} to="/alumni">ALUMNI</Link>
+                    <Link onClick={toggle} to="/about">ABOUT</Link>
+                    <Link onClick={toggle} to="/contact">CONTACT</Link>
                 </div>
             </div> : <div></div>}
 
